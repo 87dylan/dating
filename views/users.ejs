@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/users.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hello i am user <%=userId.name%></h1>
+
+    <form action="/user/:<%userId%>" method="post">
+        <input id="input" name="newItem" value="<%=userId.name%>"/>
+        <button  type="submit" onclick="handleClick()" style="color:red">find new match</button>
+        <p id="text">finding a match</p>
+
+    </form>
+    <p id="text2">you have matched with users <%=matched%> </p>
+
+    <script>
+        function handleClick() {
+            const text1=document.getElementById("text")
+            const text2=document.getElementById("text2")
+            text1.style.display="block";
+            text2.style.display="block";
+            text2.style.color="red";
+
+
+            
+
+        }
+    </script>
+
+
+</body>
+
+</html>
